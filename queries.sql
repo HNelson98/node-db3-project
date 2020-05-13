@@ -2,8 +2,17 @@
 
 -- Display the ProductName and CategoryName for all products in the database. Shows 77 records.
 
+Select ProductName, CategoryName from Product as p
+JOIN Category as c on c.Id = p.CategoryId
+
 -- Display the order Id and shipper CompanyName for all orders placed before August 9 2012. Shows 429 records.
 
+SELECT ShipVIa, Id from [Order] as o 
+Join shipper as s on s.id = o.ShipVia
+where OrderDate < "2012-08-09"
+
 -- Display the name and quantity of the products ordered in order with Id 10251. Sort by ProductName. Shows 3 records.
+
+
 
 -- Display the OrderID, Customer's Company Name and the employee's LastName for every order. All columns should be labeled clearly. Displays 16,789 records.
